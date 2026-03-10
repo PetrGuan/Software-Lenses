@@ -30,9 +30,19 @@ git checkout -b feat/add-lovelace-mindset
 - Keep terminology consistent with existing mindset files.
 - Prefer small, reviewable pull requests over large rewrites.
 
-## Claude Code Command File Format
+## Source of Truth and Command Format
 
-Command files in `.claude/commands/*.md` should follow this structure:
+To avoid duplication:
+
+- Canonical mindset content lives in topic folders:
+	- `architecture/*.md`
+	- `debugging/*.md`
+	- `performance/*.md`
+	- `strategy/*.md`
+	- `testing/*.md`
+- `.claude/commands/*.md` are lightweight wrappers that route to the canonical files.
+
+Command wrapper structure:
 
 ```md
 ---
@@ -40,18 +50,19 @@ description: "Short explanation of when to use this command"
 argument-hint: "[file, function, or module to analyze]"
 ---
 
-# Title
+# [Mindset] Analysis
 
-Instruction content...
+Canonical mindset spec: `category/mindset.md`.
+
+Read that file first, then apply it to `$ARGUMENTS`.
 ```
 
 Recommended conventions:
 
-- Include YAML frontmatter at the top.
-- Keep `description` clear about intent and use-case.
-- Keep `argument-hint` concise and concrete.
-- Provide step-by-step analysis instructions.
-- End with a deterministic report template.
+- Update the canonical file first.
+- Keep wrappers short and stable.
+- Ensure wrapper path points to the correct canonical file.
+- Keep `description` and `argument-hint` clear and concrete.
 
 ## Pull Request Expectations
 

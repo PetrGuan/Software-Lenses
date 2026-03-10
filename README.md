@@ -16,6 +16,8 @@ cp -r .claude/commands/ /path/to/your/project/.claude/commands/
 /feynman src/auth.ts
 /dijkstra src/utils/parser.ts
 /popper src/services/payment.ts
+/grothendieck src/domain/billing
+/tao src/migrations/v2
 ```
 
 Or use them directly from this repo — Claude Code auto-discovers `.claude/commands/` in the working directory.
@@ -56,6 +58,8 @@ Or use them directly from this repo — Claude Code auto-discovers `.claude/comm
 |---|---|---|
 | `/deming` | [Deming](strategy/deming.md) | Bugs recur despite fixes. Looks beyond the code to the system that produced the failure. |
 | `/hamming` | [Hamming](strategy/hamming.md) | Team is busy but not advancing. Identifies whether work targets high-leverage problems. |
+| `/grothendieck` | [Grothendieck](strategy/grothendieck.md) | One-off fixes keep repeating. Lifts recurring problems into stronger shared abstractions and invariants. |
+| `/tao` | [Tao](strategy/tao.md) | Goals are complex and blocked. Decomposes work into validated subproblems with clear checkpoints. |
 
 ## Recommended Pairings
 
@@ -66,6 +70,8 @@ Or use them directly from this repo — Claude Code auto-discovers `.claude/comm
 | Performance & distributed systems | `/shannon` + `/von-neumann` | Shannon traces information flow, von Neumann measures machine cost |
 | Reliability & production review | `/popper` + `/deming` | Popper tests assumptions, Deming fixes the system |
 | New feature planning | `/hamming` + `/einstein` | Hamming questions priorities, Einstein questions assumptions |
+| Structural refactors | `/grothendieck` + `/dijkstra` | Grothendieck upgrades abstraction boundaries, Dijkstra keeps local reasoning explicit |
+| Complex migrations | `/tao` + `/popper` | Tao decomposes execution into checkpoints, Popper falsifies risky assumptions |
 
 ## Usage Tips
 
