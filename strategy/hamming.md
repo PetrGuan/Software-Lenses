@@ -1,9 +1,8 @@
-# Hamming Mindset — Work on the Important Problem, Not Only the Tractable One
+# Hamming Mindset
 
 > "Great work often begins by choosing the problem with unusually high leverage."
 
-**Category:** Strategy
-**Skill:** `/hamming` — identifies whether current work targets high-leverage problems or comfortable ones
+**Category:** Strategy | **Skill:** `/hamming`
 
 ## When to Use
 

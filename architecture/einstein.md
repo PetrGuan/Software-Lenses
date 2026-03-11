@@ -1,9 +1,8 @@
-# Einstein Mindset — Start From First Principles, Then Run Thought Experiments
+# Einstein Mindset
 
 > "Make everything as simple as possible, but not simpler."
 
-**Category:** Architecture
-**Skill:** `/einstein` — separates real constraints from convention and stress-tests designs
+**Category:** Architecture | **Skill:** `/einstein`
 
 ## When to Use
 

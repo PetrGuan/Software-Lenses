@@ -1,9 +1,10 @@
-# Tao Mindset — Decompose, Reduce, and Iterate Toward a Working Core
+# Tao Mindset
+
+*Named after [Terence Tao](https://en.wikipedia.org/wiki/Terence_Tao), mathematician known for decomposing hard problems into tractable subproblems.*
 
 > "Complex solutions are often built by reducing to smaller truths and composing them carefully."
 
-**Category:** Strategy
-**Skill:** `/tao` — breaks complex engineering problems into solvable subproblems with explicit checkpoints
+**Category:** Strategy | **Skill:** `/tao`
 
 ## When to Use
 

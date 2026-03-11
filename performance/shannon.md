@@ -1,9 +1,8 @@
-# Shannon Mindset — Follow the Information and Measure the Noise
+# Shannon Mindset
 
 > "Communication systems fail when signal degrades faster than people notice."
 
-**Category:** Performance
-**Skill:** `/shannon` — traces information flow across boundaries and finds where signal degrades
+**Category:** Performance | **Skill:** `/shannon`
 
 ## When to Use
 

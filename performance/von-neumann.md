@@ -1,9 +1,8 @@
-# von Neumann Mindset — Respect the Cost of State, Memory, and Execution
+# von Neumann Mindset
 
 > "The machine eventually gets a vote."
 
-**Category:** Performance
-**Skill:** `/von-neumann` — audits runtime cost of allocation, copying, synchronization, and I/O on hot paths
+**Category:** Performance | **Skill:** `/von-neumann`
 
 ## When to Use
 

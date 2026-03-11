@@ -1,9 +1,8 @@
-# Feynman Mindset — Explain the System Without Hiding Behind Jargon
+# Feynman Mindset
 
 > "If you cannot explain it simply, you do not understand it well enough."
 
-**Category:** Debugging
-**Skill:** `/feynman` — analyzes code for clarity and explainability
+**Category:** Debugging | **Skill:** `/feynman`
 
 ## When to Use
 

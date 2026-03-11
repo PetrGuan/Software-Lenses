@@ -1,9 +1,8 @@
-# Grothendieck Mindset — Reframe the Problem Until the Hard Part Becomes Structural
+# Grothendieck Mindset
 
 > "The right abstraction can make a hard problem almost inevitable to solve."
 
-**Category:** Strategy
-**Skill:** `/grothendieck` — lifts local implementation pain into a stronger model with better invariants
+**Category:** Strategy | **Skill:** `/grothendieck`
 
 ## When to Use
 

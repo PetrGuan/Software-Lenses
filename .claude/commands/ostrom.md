@@ -8,3 +8,8 @@ argument-hint: "[shared component, platform area, or API surface to analyze]"
 Canonical mindset spec: `strategy/ostrom.md`.
 
 Read that file first, then apply it to `$ARGUMENTS`.
+
+Requirements:
+- Follow its diagnostic questions and output format exactly.
+- Reference concrete files/functions/lines in the target code.
+- Identify who owns the commons — show governance gaps, not just technical ones.

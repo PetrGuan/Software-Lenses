@@ -8,3 +8,8 @@ argument-hint: "[function, module, or critical path to analyze]"
 Canonical mindset spec: `architecture/hoare.md`.
 
 Read that file first, then apply it to `$ARGUMENTS`.
+
+Requirements:
+- Follow its diagnostic questions and output format exactly.
+- Reference concrete files/functions/lines in the target code.
+- State preconditions, postconditions, and invariants explicitly — not just "looks correct."

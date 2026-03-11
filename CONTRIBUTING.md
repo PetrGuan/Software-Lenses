@@ -19,7 +19,7 @@ git checkout -b feat/add-lovelace-mindset
 
 ## What to Contribute
 
-- Add new analysis mindsets under the correct topic folder (`architecture/`, `debugging/`, `evolution/`, `performance/`, `security/`, `strategy/`, `testing/`).
+- Add new analysis mindsets under the correct category folder (`architecture/`, `debugging/`, `evolution/`, `performance/`, `security/`, `strategy/`, `testing/`).
 - Improve existing mindset files for clarity, accuracy, and practical usefulness.
 - Fix broken links, formatting issues, and inconsistencies between command files and docs.
 
@@ -34,7 +34,7 @@ git checkout -b feat/add-lovelace-mindset
 
 To avoid duplication:
 
-- Canonical mindset content lives in topic folders:
+- Canonical mindset content lives in category folders:
   - `architecture/*.md`
   - `debugging/*.md`
   - `evolution/*.md`
@@ -44,27 +44,58 @@ To avoid duplication:
   - `testing/*.md`
 - `.claude/commands/*.md` are lightweight wrappers that route to the canonical files.
 
-Command wrapper structure:
+### Canonical spec schema
+
+Every canonical mindset file must follow this structure:
+
+```md
+# [Name] Mindset
+
+> "Quote from or inspired by the thinker."
+
+**Category:** [Category] | **Skill:** `/[skill-name]`
+
+## When to Use          (required — 3-5 bullet points)
+## Core Move            (required — the key analytical action)
+## Key Concepts         (optional — for mindsets with specific terminology)
+## Diagnostic Questions (required — 3-6 questions to guide analysis)
+## Output Format        (required — code block with report template)
+## Anti-Patterns This Catches (required — 3-5 patterns)
+## Pairs Well With      (required — 2-3 complementary mindsets with rationale)
+## When Not to Over-Apply (required — 2-3 situations where the mindset doesn't fit)
+```
+
+### Command wrapper template
+
+Every wrapper in `.claude/commands/` must include a Requirements block:
 
 ```md
 ---
-description: "Short explanation of when to use this command"
+description: "Analyze [domain] using the [Name] mindset: [what it does]. Use when [scenario]."
 argument-hint: "[file, function, or module to analyze]"
 ---
 
-# [Mindset] Analysis
+# [Name] Analysis
 
-Canonical mindset spec: `category/mindset.md`.
+Canonical mindset spec: `category/name.md`.
 
 Read that file first, then apply it to `$ARGUMENTS`.
+
+Requirements:
+- Follow its diagnostic questions and output format exactly.
+- Reference concrete files/functions/lines in the target code.
+- [One mindset-specific instruction.]
 ```
 
-Recommended conventions:
+`$ARGUMENTS` is a Claude Code variable that resolves to whatever the user types after the slash command (e.g., `/feynman src/auth.ts` sets `$ARGUMENTS` to `src/auth.ts`).
+
+### Conventions
 
 - Update the canonical file first.
 - Keep wrappers short and stable.
 - Ensure wrapper path points to the correct canonical file.
 - Keep `description` and `argument-hint` clear and concrete.
+- Update both README tables (categorized and alphabetical index) when adding a mindset.
 
 ## Pull Request Expectations
 

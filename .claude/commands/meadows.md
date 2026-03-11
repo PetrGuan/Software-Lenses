@@ -8,3 +8,8 @@ argument-hint: "[system, process, or recurring failure pattern to analyze]"
 Canonical mindset spec: `strategy/meadows.md`.
 
 Read that file first, then apply it to `$ARGUMENTS`.
+
+Requirements:
+- Follow its diagnostic questions and output format exactly.
+- Reference concrete files/functions/lines in the target code.
+- Rank intervention points by leverage — show where small changes produce large system effects.

@@ -14,7 +14,9 @@ Name of the mindset and suggested slash command (for example, `/lovelace`).
 
 - [ ] Architecture
 - [ ] Debugging
+- [ ] Evolution
 - [ ] Performance
+- [ ] Security
 - [ ] Strategy
 - [ ] Testing
 - [ ] New category (describe below)

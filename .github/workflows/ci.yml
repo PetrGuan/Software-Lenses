@@ -22,6 +22,17 @@ jobs:
           globs: |
             **/*.md
 
+  parity-check:
+    name: Parity check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check canonical-wrapper-README parity
+        shell: bash
+        run: bash scripts/check-parity.sh
+
   link-check:
     name: Internal link check
     runs-on: ubuntu-latest
@@ -33,6 +44,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Install markdown-link-check
+        run: npm install -g markdown-link-check
 
       - name: Check markdown internal links
         shell: bash
@@ -54,7 +68,5 @@ jobs:
           }
           JSON
 
-          while IFS= read -r -d '' file; do
-            echo "Checking $file"
-            npx -y markdown-link-check "$file" -q -c /tmp/mlc_config.json
-          done < <(find . -type f -name "*.md" -print0)
+          find . -type f -name "*.md" -not -path "./.git/*" -print0 | \
+            xargs -0 -n1 markdown-link-check -q -c /tmp/mlc_config.json

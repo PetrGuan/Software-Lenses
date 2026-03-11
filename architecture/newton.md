@@ -1,9 +1,8 @@
-# Newton Mindset — Identify Forces, State Changes, and Invariants
+# Newton Mindset
 
 > "A system changes because something acts on it."
 
-**Category:** Architecture
-**Skill:** `/newton` — maps state, forces, and invariants to find hidden interaction bugs
+**Category:** Architecture | **Skill:** `/newton`
 
 ## When to Use
 

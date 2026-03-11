@@ -1,9 +1,8 @@
-# Turing Mindset — Turn Intent Into an Executable Procedure
+# Turing Mindset
 
 > "A good explanation is one that can be carried out step by step."
 
-**Category:** Architecture
-**Skill:** `/turing` — verifies that code correctly translates intent into an explicit, terminating procedure
+**Category:** Architecture | **Skill:** `/turing`
 
 ## When to Use
 

@@ -1,9 +1,8 @@
-# Popper Mindset — Try to Break the Theory Before Reality Does
+# Popper Mindset
 
 > "Strong ideas survive serious attempts to refute them."
 
-**Category:** Testing
-**Skill:** `/popper` — extracts claims from code and designs tests to falsify them
+**Category:** Testing | **Skill:** `/popper`
 
 ## When to Use
 

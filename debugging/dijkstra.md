@@ -1,9 +1,8 @@
-# Dijkstra Mindset — Favor Correctness, Local Reasoning, and Explicit Control
+# Dijkstra Mindset
 
 > "Simplicity is prerequisite for reliability."
 
-**Category:** Debugging
-**Skill:** `/dijkstra` — audits code for hidden state, implicit control flow, and reasoning burden
+**Category:** Debugging | **Skill:** `/dijkstra`
 
 ## When to Use
 

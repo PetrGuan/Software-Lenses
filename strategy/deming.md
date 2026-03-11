@@ -1,9 +1,8 @@
-# Deming Mindset — Improve the System, Not Just the Local Mistake
+# Deming Mindset
 
 > "Most recurring failures are properties of the system, not isolated negligence."
 
-**Category:** Strategy
-**Skill:** `/deming` — analyzes the system around the code to find why the wrong action was easy
+**Category:** Strategy | **Skill:** `/deming`
 
 ## When to Use
 

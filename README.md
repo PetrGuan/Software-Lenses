@@ -2,27 +2,37 @@
 
 Cross-language thinking models for analyzing software — as readable guides and as executable [Claude Code](https://docs.anthropic.com/en/docs/claude-code) slash commands.
 
-These are not tied to one programming language or framework. Treat them as lenses to apply when a problem feels unclear, unstable, or overcomplicated.
+These are not tied to one programming language or framework. Treat them as mindsets to apply when a problem feels unclear, unstable, or overcomplicated.
 
 ## Quick Start
 
-Clone this repo into any project and start using the slash commands:
+Copy the entire repo (commands + mindset specs) into your project:
 
 ```bash
-# Copy the .claude/commands/ directory into your project
+# Copy both the commands and the canonical mindset specs
 cp -r .claude/commands/ /path/to/your/project/.claude/commands/
+cp -r architecture/ debugging/ evolution/ performance/ security/ strategy/ testing/ /path/to/your/project/
+```
 
-# Then in Claude Code, use them with:
+Then in Claude Code, use them:
+
+```bash
 /feynman src/auth.ts
 /dijkstra src/utils/parser.ts
 /popper src/services/payment.ts
-/grothendieck src/domain/billing
-/tao src/migrations/v2
-/lamport src/events/
-/ostrom src/platform/
 ```
 
-Or use them directly from this repo — Claude Code auto-discovers `.claude/commands/` in the working directory.
+Or clone this repo and work directly inside it — Claude Code auto-discovers `.claude/commands/` in the working directory.
+
+## Start Here
+
+New to this? These three mindsets apply to any codebase:
+
+- **`/feynman`** — When code works but no one can explain why. Gets you clarity fast.
+- **`/popper`** — When a design sounds right but hasn't been tested against failure. Finds blind spots.
+- **`/dijkstra`** — When code is hard to verify or trust. Reduces reasoning burden.
+
+Once comfortable, explore the full set below or try [recommended pairings](#pairs-well-with).
 
 ## Mindsets & Skills
 
@@ -91,7 +101,7 @@ Or use them directly from this repo — Claude Code auto-discovers `.claude/comm
 |---|---|---|
 | `/darwin` | [Darwin](evolution/darwin.md) | Codebase accumulates dead code and tech debt. Evaluates fitness, finds vestigial structures, guides adaptation. |
 
-## Recommended Pairings
+## Pairs Well With
 
 | Scenario | Combination | Why |
 |---|---|---|
@@ -155,26 +165,32 @@ Alphabetical quick index of all available mindsets and slash commands.
 
 - Use **one** skill when you need clarity fast
 - Combine **two** when a problem has both design and operational dimensions
-- Avoid stacking many lenses on a trivial task
+- Avoid stacking many mindsets on a trivial task
 - Each skill reads your actual code and produces a structured report with file/line references
 
 ## Installation
 
 ### Per-project (recommended for teams)
 
-Copy `.claude/commands/` into your project's `.claude/` directory. Commit it to share with the team.
+Copy both the command wrappers and the canonical mindset specs into your project. The commands reference the spec files, so both are needed.
 
 ```bash
+# From inside the Software-Lenses repo:
 cp -r .claude/commands/ /path/to/your/project/.claude/commands/
+cp -r architecture/ debugging/ evolution/ performance/ security/ strategy/ testing/ /path/to/your/project/
 ```
+
+Commit the files to share with the team.
 
 ### Global (all projects)
 
-Copy the command files to your personal Claude Code config:
+Copy the command files and specs to your personal Claude Code config directory:
 
 ```bash
 mkdir -p ~/.claude/commands
 cp .claude/commands/*.md ~/.claude/commands/
+# Also copy specs to a location Claude can find them:
+cp -r architecture/ debugging/ evolution/ performance/ security/ strategy/ testing/ ~/.claude/
 ```
 
 ## License
